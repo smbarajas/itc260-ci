@@ -56,7 +56,7 @@ if(!function_exists('feedback'))
 
 if(!function_exists('bootswatchFeedback'))
 {
-
+	
 	/**
 	 * shows a quick user message (flash/heads up) to provide user feedback
 	 *
@@ -110,5 +110,15 @@ if(!function_exists('bootswatchFeedback'))
 		}
 		return $myReturn; //data passed back for printing
 	} 
-
+	
 }#end bootswatchFeedback()
+
+if(!function_exists('makeLinks')) {
+	function makeLinks($nav) {
+		$myReturn = '';
+		foreach($nav as $key => $value) {
+			$myReturn .= '<li><a href="' . $key . '">' . $value . '</a></li>' . PHP_EOL;
+		}
+		return $myReturn;
+	}
+}
